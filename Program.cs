@@ -7,8 +7,14 @@
 
 Console.WriteLine("Задайте рамер массива");
 int a = int.Parse(Console.ReadLine());
+
 int[] array1 = ArrayRandom(a);
+Console.WriteLine("Основной массив:");
 PrintArray(array1);
+
+string array2 = NewLittleArray(array1);
+Console.WriteLine("Обрезанный массив:");
+Console.WriteLine($"[{string.Join(", ", array2)}]");
 
 string NewLittleArray(int[] array)
 {
@@ -30,7 +36,7 @@ int[] ArrayRandom(int a)
     Random random = new Random();
     for (int i = 0; i < a; i++)
     {
-        array[i] = random.Next(1, 1000);
+        array[i] = random.Next(-1000, 1000);
     }
     return array;
 }
