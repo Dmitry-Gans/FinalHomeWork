@@ -7,3 +7,15 @@
 
 Console.WriteLine("Задайте рамер массива");
 int a = int.Parse(Console.ReadLine());
+int[] array = ArrayRandom(a);
+
+int[] ArrayRandom(int a)
+{
+    int[] array = new int[a];
+    Random random = new Random();
+    for (int i = 0; i < a; i++)
+    {
+        array[i] = random.Next(1, 1000);
+    }
+    return array;
+}
