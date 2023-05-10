@@ -8,6 +8,7 @@
 Console.WriteLine("Задайте рамер массива");
 int a = int.Parse(Console.ReadLine());
 int[] array = ArrayRandom(a);
+PrintArray(array);
 
 int[] ArrayRandom(int a)
 {
@@ -18,4 +19,8 @@ int[] ArrayRandom(int a)
         array[i] = random.Next(1, 1000);
     }
     return array;
+}
+void PrintArray(int[] array)
+{
+    Console.WriteLine($"[{string.Join(", ", array)}]");
 }
